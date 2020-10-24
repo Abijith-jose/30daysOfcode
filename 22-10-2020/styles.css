@@ -1,0 +1,40 @@
+h1 {
+    color: red;
+  }
+  p {
+    color: green;
+  }
+  ul{
+      color: orchid;
+  }
+  .special {
+    color: orange;
+    font-weight: italic;
+  }
+  li em {
+    color: rebeccapurple;
+  }
+  h1 + p {
+    font-size: 200%;
+  }
+  a:link {
+    color: rgb(196, 23, 52);
+  }
+  a:visited {
+    color: orangered;
+  }
+  a:hover {
+      color: deeppink;
+    text-decoration: none;
+  }
+  .outer {
+    border: 5px solid black;
+    outline-style: groove;
+  }
+  .box {
+    padding: 10px;
+    width: 50%;
+    background-color: rebeccapurple;
+    color: white;
+  }
+  

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- object invocation -->
+<p id="demo"></p>
+
+<script>
+
+    // object invocation//
+var myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+    // declaration // 
+  }
+}
+document.getElementById("demo").innerHTML = myObject.fullName(); 
+// invocation//
+// if it print without bracket prints the declration//
+
+</script>
+
+</body>
+</html>

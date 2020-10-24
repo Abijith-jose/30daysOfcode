@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>manipulating dom</title>
+  </head>
+
+
+
+  <style>
+      img{
+        width: 200px;
+    height: 200px;
+    object-fit: cover;
+      }
+  </style>
+
+
+
+  <body>
+
+
+
+
+      <section>
+        <img src="dinosor.jfif" alt="A red Tyrannosaurus Rex">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+
+
+     const link = document.querySelector('a');
+    //  select the a tag of reference www.morzilla//
+
+
+    link.textContent = 'Mozilla Developer Network';
+    // text content is mozilla homepage and replace to mozilla developer//
+
+
+    link.href = 'https://developer.mozilla.org';
+    // manipulating the link and change to developer.mozilla//
+
+
+     const sect = document.querySelector('section');
+    //  select the entire section//
+
+
+    const para = document.createElement('p');
+    para.textContent = 'We hope you enjoyed the ride.';
+    // we have created a p and add text to it//
+
+
+    sect.appendChild(para);
+    // adding para to p//
+
+
+
+    const text = document.createTextNode(' — the premier source for web development.');
+// create txt //
+    
+const linkPara = document.querySelector('p');
+linkPara.appendChild(text);
+
+
+// link the text to p//
+
+
+sect.appendChild(linkPara);
+// txt will add to section//
+
+// sect.removeChild(linkPara)
+// removing of added txt//
+      </script>
+  </body>
+</html>

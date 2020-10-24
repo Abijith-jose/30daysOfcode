@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a Js object into a JSON string, and JSON string to Js Object</h2>
+<p id="demo"></p>
+<script>
+var myObj = { name: "John", age: 31, city: "New York" };
+
+
+// sending//
+var myJSON = JSON.stringify(myObj);
+// js object to myjson stringify//
+
+
+// receving//
+var parsedJSON = JSON.parse(myJSON);
+//myjson to js object//
+
+
+document.getElementById("demo").innerHTML=typeof parsedJSON
+</script>
+
+</body>
+</html>

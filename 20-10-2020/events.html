@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- inline -->
+<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+<!-- <h1 onclick=log()>Click on this text!</h1> -->
+
+
+
+<!-- this specifies owner -->
+
+
+<!-- date -->
+<button onclick="displayDate()">The time is</button>
+
+
+
+<!-- check cookies -->
+<body onload = "checkcookies()">
+    <p id="efg"></p>
+
+
+
+<!-- enter name -->
+Enter your name: <input type="text" id="fname" onchange="yyy()">
+<br>
+
+</br>
+
+
+<!-- mouseoer -->
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:yellow;width:120px;height:20px;padding:40px;">
+Mouse Over</div>
+<br>
+
+</br>
+
+
+
+<!-- mouse click down -->
+<div onmousedown="mDown(this)" onmouseup="mup(this)" 
+style="background-color:royalblue;width:120px;height:20px;padding:40px;">
+click here</div>
+
+
+
+
+    <script>
+
+
+        function log(){
+          console.log("me clicked")
+        }
+
+
+        // date//
+        function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+
+// checkcookies//
+function checkCookies() {
+  var text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("efg").innerHTML = text;
+}
+
+
+
+
+// enter name to uppercase//
+function yyy(){
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
+
+
+// mouse over//
+
+function mOver(obj) {
+  obj.innerHTML = "Hello....."
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over"
+}
+
+
+// mouse click//
+
+function mDown(obj) {
+    obj.style.backgroundColor = "yellow";  
+  obj.innerHTML = "click here"
+}
+
+function mup(obj) {
+    obj.style.backgroundColor = "royalblue";  
+  obj.innerHTML = "welcome"
+}
+
+
+    </script>
+
+    <p id="demo"></p>
+</body>
+</html>

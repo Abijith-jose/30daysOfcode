@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- self invoking -->
+<p id="aaa"></p>
+
+<!-- function call as values -->
+<p id="bb"></p>
+
+
+<script>
+    // self invoking//
+(function () {
+  document.getElementById("aaa").innerHTML = "Hello!!!!!!!!!";
+})();
+
+
+// function be call as values//
+function myFunction(a, b) {
+  return a * b;
+}
+var x = myFunction(4, 3);
+document.getElementById("bb").innerHTML = x;
+
+
+</script>
+
+</body>
+</html>

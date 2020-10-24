@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+//   sets the data type and the value of the dragged data//
+// data type is "txt" value for id is drag1//
+}
+
+function drop(ev) {
+  ev.preventDefault();
+//   cannot be dropped if it is in dafault state//
+
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<!-- ondrag over specifes where to drop img -->
+
+
+<br>
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+<!-- img draggable true -->
+<!-- ondragstart call function drag events -->
+
+</body>
+</html>

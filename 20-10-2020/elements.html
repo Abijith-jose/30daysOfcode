@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <img id="image" src="meesi.jpg" width="160" height="120">
+
+<h2>My First Page</h2>
+<h1 id="zz">old heading Page</h2>
+
+
+<p id="intro">Hello World!</p>
+
+
+<p>this is my sample page</p>
+
+<!-- ById -->
+
+<p id="demo" ></p>
+
+
+
+<!-- tagname -->
+<p id="test"></p>
+
+
+
+
+<!-- class -->
+<p class="ab">The DOM is very useful.</p>
+<p id="cd"></p>
+
+
+
+<!-- selectorall -->
+<p class="ef">this is funny</p>
+<p id="gh"></p>
+
+
+
+<script>
+
+// Byid//
+
+    var project = document.getElementById("intro")
+
+    document.getElementById("demo").innerHTML = "object model and programming interface for html elements" +" " +project.innerHTML;
+
+// tagname//
+
+    var x=document.getElementsByTagName("p");
+    document.getElementById("test").innerHTML = 'how is studies goin on' + x[0].innerHTML;
+
+//class//
+    var x = document.getElementsByClassName("ab");
+    document.getElementById("cd").innerHTML = 
+'The first paragraph with class "ab"  ' + x[0].innerHTML;
+
+// selectorall//
+var x = document.querySelectorAll("p.ef");
+document.getElementById("gh").innerHTML = 
+'The first paragraph class="intro" ' + x[0].innerHTML;
+
+
+// write//
+document.write(Date());
+
+// changing heading//
+var element = document.getElementById("zz");
+element.innerHTML = "New Heading";
+
+// image//
+document.getElementById("image").src = "landscape.jpg";
+</script>
+
+<p>the paragraph above changed</p>
+
+</body>
+</html>
